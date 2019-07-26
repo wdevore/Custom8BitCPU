@@ -1,0 +1,534 @@
+EESchema Schematic File Version 4
+LIBS:CPU8Bit-cache
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 5 5
+Title "RAM memory"
+Date "2019-07-12"
+Rev "1.0"
+Comp "William Cleveland"
+Comment1 "RAM and ROM"
+Comment2 "Includes Side loading"
+Comment3 "16 Bit Memory"
+Comment4 ""
+$EndDescr
+$Comp
+L Memory_NVRAM_FM1808:FM1808 U30
+U 1 1 5D30CE20
+P 6700 2950
+F 0 "U30" H 6450 3400 50  0000 C CNN
+F 1 "32Kx8 NVRAM FM1808 Low" V 6700 2300 50  0000 C CNN
+F 2 "" H 6300 3500 50  0001 C CNN
+F 3 "" H 6300 3500 50  0001 C CNN
+	1    6700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS373 U28
+U 1 1 5D32B5C5
+P 4200 2600
+F 0 "U28" H 3950 3250 50  0000 C CNN
+F 1 "Addr Low 74LS373" V 4200 2600 50  0000 C CNN
+F 2 "" H 4200 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS373" H 4200 2600 50  0001 C CNN
+	1    4200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS373 U29
+U 1 1 5D32D20B
+P 4200 4550
+F 0 "U29" H 3950 5200 50  0000 C CNN
+F 1 "Addr Hi 74LS373" V 4200 4550 50  0000 C CNN
+F 2 "" H 4200 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS373" H 4200 4550 50  0001 C CNN
+	1    4200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3100 3450 3100
+Wire Wire Line
+	3450 3100 3450 5050
+Wire Wire Line
+	3450 5050 3700 5050
+Entry Wire Line
+	4800 2000 4700 2100
+Entry Wire Line
+	4800 2100 4700 2200
+Entry Wire Line
+	4800 2200 4700 2300
+Entry Wire Line
+	4800 2300 4700 2400
+Entry Wire Line
+	4800 2400 4700 2500
+Entry Wire Line
+	4800 2500 4700 2600
+Entry Wire Line
+	4800 2600 4700 2700
+Entry Wire Line
+	4800 2700 4700 2800
+Entry Wire Line
+	4700 4050 4800 4150
+Entry Wire Line
+	4700 4150 4800 4250
+Entry Wire Line
+	4700 4250 4800 4350
+Entry Wire Line
+	4700 4350 4800 4450
+Entry Wire Line
+	4700 4450 4800 4550
+Entry Wire Line
+	4700 4550 4800 4650
+Entry Wire Line
+	4700 4650 4800 4750
+Entry Wire Line
+	6200 2550 6300 2650
+Entry Wire Line
+	6200 2650 6300 2750
+Entry Wire Line
+	6200 2750 6300 2850
+Entry Wire Line
+	6200 2850 6300 2950
+Entry Wire Line
+	6200 2950 6300 3050
+Entry Wire Line
+	6200 3050 6300 3150
+Entry Wire Line
+	6200 3150 6300 3250
+Entry Wire Line
+	6200 3250 6300 3350
+Entry Wire Line
+	6200 3350 6300 3450
+Entry Wire Line
+	6200 3450 6300 3550
+Entry Wire Line
+	6200 3550 6300 3650
+Entry Wire Line
+	6200 3650 6300 3750
+Entry Wire Line
+	6200 3750 6300 3850
+Entry Wire Line
+	6200 3850 6300 3950
+Entry Wire Line
+	6200 3950 6300 4050
+Text HLabel 2450 2100 0    50   Input ~ 0
+BUS_0
+Text HLabel 2450 2200 0    50   Input ~ 0
+BUS_1
+Text HLabel 2450 2300 0    50   Input ~ 0
+BUS_2
+Text HLabel 2450 2400 0    50   Input ~ 0
+BUS_3
+Text HLabel 2450 2500 0    50   Input ~ 0
+BUS_4
+Text HLabel 2450 2600 0    50   Input ~ 0
+BUS_5
+Text HLabel 2450 2700 0    50   Input ~ 0
+BUS_6
+Text HLabel 2450 2800 0    50   Input ~ 0
+BUS_7
+Text HLabel 2250 3000 0    50   Input ~ 0
+Addr_LD
+Wire Wire Line
+	2250 3000 3200 3000
+Text HLabel 2450 4050 0    50   Input ~ 0
+BUS_8
+Text HLabel 2450 4150 0    50   Input ~ 0
+BUS_9
+Text HLabel 2450 4250 0    50   Input ~ 0
+BUS_10
+Text HLabel 2450 4350 0    50   Input ~ 0
+BUS_11
+Text HLabel 2450 4450 0    50   Input ~ 0
+BUS_12
+Text HLabel 2450 4550 0    50   Input ~ 0
+BUS_13
+Text HLabel 2450 4650 0    50   Input ~ 0
+BUS_14
+Text HLabel 2450 4750 0    50   Input ~ 0
+BUS_15
+Wire Wire Line
+	3200 3000 3200 4950
+Wire Wire Line
+	3200 4950 3700 4950
+Connection ~ 3200 3000
+Wire Wire Line
+	3200 3000 3700 3000
+Connection ~ 3450 5050
+$Comp
+L power:GND #PWR029
+U 1 1 5D34DEF1
+P 4200 5550
+F 0 "#PWR029" H 4200 5300 50  0001 C CNN
+F 1 "GND" H 4205 5377 50  0000 C CNN
+F 2 "" H 4200 5550 50  0001 C CNN
+F 3 "" H 4200 5550 50  0001 C CNN
+	1    4200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5550 4200 5450
+Text GLabel 2600 5450 0    50   Input ~ 0
+~Ext_Disable
+$Comp
+L power:VCC #PWR028
+U 1 1 5D357F99
+P 4200 1600
+F 0 "#PWR028" H 4200 1450 50  0001 C CNN
+F 1 "VCC" H 4217 1773 50  0000 C CNN
+F 2 "" H 4200 1600 50  0001 C CNN
+F 3 "" H 4200 1600 50  0001 C CNN
+	1    4200 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1600 4200 1700
+Wire Wire Line
+	4200 3750 3600 3750
+Wire Wire Line
+	3600 3750 3600 1700
+Wire Wire Line
+	3600 1700 4200 1700
+Connection ~ 4200 1700
+Wire Wire Line
+	4200 1700 4200 1800
+Wire Wire Line
+	4200 3400 4950 3400
+Wire Wire Line
+	4950 3400 4950 5450
+Wire Wire Line
+	4950 5450 4200 5450
+Connection ~ 4200 5450
+Wire Wire Line
+	4200 5450 4200 5350
+Wire Wire Line
+	2600 5450 2850 5450
+$Comp
+L 74xx:74LS04 U27
+U 1 1 5D367EE7
+P 3150 5450
+F 0 "U27" H 3150 5767 50  0000 C CNN
+F 1 "74LS04" H 3150 5676 50  0000 C CNN
+F 2 "" H 3150 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3150 5450 50  0001 C CNN
+	1    3150 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5450 3450 5050
+Text GLabel 2600 6250 0    50   Input ~ 0
+Ext_AddrBus_H
+Wire Bus Line
+	2600 6250 4800 6250
+Text GLabel 2600 6500 0    50   Input ~ 0
+Ext_AddrBus_L
+Wire Notes Line
+	1800 5250 2700 5250
+Wire Notes Line
+	2700 5250 2700 6700
+Wire Notes Line
+	2700 6700 1800 6700
+Wire Notes Line
+	1800 6700 1800 5250
+Text Notes 1800 5250 0    50   ~ 0
+External Programming\nCard
+$Comp
+L power:GND #PWR030
+U 1 1 5D36F6AB
+P 6700 4800
+F 0 "#PWR030" H 6700 4550 50  0001 C CNN
+F 1 "GND" H 6705 4627 50  0000 C CNN
+F 2 "" H 6700 4800 50  0001 C CNN
+F 3 "" H 6700 4800 50  0001 C CNN
+	1    6700 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4650 6700 4750
+Wire Wire Line
+	6300 4250 6150 4250
+Wire Wire Line
+	6150 4250 6150 4750
+Wire Wire Line
+	6150 4750 6700 4750
+Connection ~ 6700 4750
+Wire Wire Line
+	6700 4750 6700 4800
+Text GLabel 2600 6000 0    50   Input ~ 0
+~Ext_Mem_OE
+Text HLabel 2250 3550 0    50   Input ~ 0
+~Mem_OE
+Wire Wire Line
+	5250 3550 2250 3550
+Wire Wire Line
+	2600 6000 5250 6000
+Text HLabel 2250 3650 0    50   Input ~ 0
+~Mem_WE
+Wire Wire Line
+	5150 3650 2250 3650
+Text GLabel 2600 5850 0    50   Input ~ 0
+~Ext_Mem_WE
+Wire Wire Line
+	2600 5850 5150 5850
+Wire Wire Line
+	6700 2450 6700 1700
+$Comp
+L Memory_NVRAM_FM1808:FM1808 U31
+U 1 1 5D2A0BEB
+P 6700 5750
+F 0 "U31" H 6450 6200 50  0000 C CNN
+F 1 "32Kx8 NVRAM FM1808 High" V 6700 5100 50  0000 C CNN
+F 2 "" H 6300 6300 50  0001 C CNN
+F 3 "" H 6300 6300 50  0001 C CNN
+	1    6700 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3550 5250 4350
+Wire Wire Line
+	5150 3650 5150 4450
+Wire Wire Line
+	4200 1700 6700 1700
+Wire Wire Line
+	5150 4450 6300 4450
+Connection ~ 5150 4450
+Wire Wire Line
+	5150 4450 5150 5850
+Wire Wire Line
+	5250 4350 6300 4350
+Connection ~ 5250 4350
+Wire Wire Line
+	5250 4350 5250 6000
+Wire Bus Line
+	4800 3950 6200 3950
+Wire Bus Line
+	4800 1950 6200 1950
+Wire Bus Line
+	5900 6500 5900 5350
+Wire Bus Line
+	5900 3250 6200 3250
+Wire Bus Line
+	2600 6500 5900 6500
+Entry Wire Line
+	6200 5350 6300 5450
+Entry Wire Line
+	6200 5450 6300 5550
+Entry Wire Line
+	6200 5550 6300 5650
+Entry Wire Line
+	6200 5650 6300 5750
+Entry Wire Line
+	6200 5750 6300 5850
+Entry Wire Line
+	6200 5850 6300 5950
+Entry Wire Line
+	6200 5950 6300 6050
+Entry Wire Line
+	6200 6050 6300 6150
+Entry Wire Line
+	6200 6150 6300 6250
+Entry Wire Line
+	6200 6250 6300 6350
+Entry Wire Line
+	6200 6350 6300 6450
+Entry Wire Line
+	6200 6450 6300 6550
+Entry Wire Line
+	6200 6550 6300 6650
+Entry Wire Line
+	6200 6650 6300 6750
+Entry Wire Line
+	6200 6750 6300 6850
+Wire Bus Line
+	5900 5350 6200 5350
+Connection ~ 5900 5350
+Wire Bus Line
+	5900 5350 5900 3250
+Wire Bus Line
+	4800 6150 6200 6150
+Connection ~ 4800 6150
+Wire Bus Line
+	4800 6150 4800 6250
+Wire Wire Line
+	3700 2100 3450 2100
+Wire Wire Line
+	3700 2200 3450 2200
+Wire Wire Line
+	3700 2300 3450 2300
+Wire Wire Line
+	3700 2400 3450 2400
+Wire Wire Line
+	3700 2500 3450 2500
+Wire Wire Line
+	3700 2600 3450 2600
+Wire Wire Line
+	3700 2700 3450 2700
+Wire Wire Line
+	3700 2800 3450 2800
+Entry Wire Line
+	3350 2000 3450 2100
+Entry Wire Line
+	3350 2100 3450 2200
+Entry Wire Line
+	3350 2200 3450 2300
+Entry Wire Line
+	3350 2300 3450 2400
+Entry Wire Line
+	3350 2400 3450 2500
+Entry Wire Line
+	3350 2500 3450 2600
+Entry Wire Line
+	3350 2600 3450 2700
+Entry Wire Line
+	3350 2700 3450 2800
+Entry Wire Line
+	2550 2000 2450 2100
+Entry Wire Line
+	2550 2100 2450 2200
+Entry Wire Line
+	2550 2200 2450 2300
+Entry Wire Line
+	2550 2300 2450 2400
+Entry Wire Line
+	2550 2400 2450 2500
+Entry Wire Line
+	2550 2500 2450 2600
+Entry Wire Line
+	2550 2600 2450 2700
+Entry Wire Line
+	2550 2700 2450 2800
+Wire Bus Line
+	2550 1900 3350 1900
+Entry Wire Line
+	3600 3950 3700 4050
+Entry Wire Line
+	3600 4050 3700 4150
+Entry Wire Line
+	3600 4150 3700 4250
+Entry Wire Line
+	3600 4250 3700 4350
+Entry Wire Line
+	3600 4350 3700 4450
+Entry Wire Line
+	3600 4450 3700 4550
+Entry Wire Line
+	3600 4550 3700 4650
+Entry Wire Line
+	3600 4650 3700 4750
+Entry Wire Line
+	2550 3950 2450 4050
+Entry Wire Line
+	2550 4050 2450 4150
+Entry Wire Line
+	2550 4150 2450 4250
+Entry Wire Line
+	2550 4250 2450 4350
+Entry Wire Line
+	2550 4350 2450 4450
+Entry Wire Line
+	2550 4450 2450 4550
+Entry Wire Line
+	2550 4550 2450 4650
+Entry Wire Line
+	2550 4650 2450 4750
+Wire Bus Line
+	2550 3850 3600 3850
+Entry Wire Line
+	7150 3050 7250 3150
+Entry Wire Line
+	7150 3150 7250 3250
+Entry Wire Line
+	7150 3250 7250 3350
+Entry Wire Line
+	7150 3350 7250 3450
+Entry Wire Line
+	7150 3450 7250 3550
+Entry Wire Line
+	7150 3550 7250 3650
+Entry Wire Line
+	7150 3650 7250 3750
+Entry Wire Line
+	7150 3750 7250 3850
+Entry Wire Line
+	7150 5850 7250 5950
+Entry Wire Line
+	7150 5950 7250 6050
+Entry Wire Line
+	7150 6050 7250 6150
+Entry Wire Line
+	7150 6150 7250 6250
+Entry Wire Line
+	7150 6250 7250 6350
+Entry Wire Line
+	7150 6350 7250 6450
+Entry Wire Line
+	7150 6450 7250 6550
+Entry Wire Line
+	7150 6550 7250 6650
+Wire Bus Line
+	3600 7700 7250 7700
+Wire Bus Line
+	3350 1900 3350 1150
+Wire Bus Line
+	3350 1150 7250 1150
+Connection ~ 3350 1900
+Wire Wire Line
+	6700 7450 6700 7550
+Wire Wire Line
+	6700 7550 7450 7550
+Wire Wire Line
+	7450 7550 7450 4750
+Wire Wire Line
+	7450 4750 6700 4750
+Wire Wire Line
+	6300 7050 6150 7050
+Wire Wire Line
+	6150 7050 6150 7550
+Wire Wire Line
+	6150 7550 6700 7550
+Connection ~ 6700 7550
+Wire Wire Line
+	6300 7150 5250 7150
+Wire Wire Line
+	5250 7150 5250 6000
+Connection ~ 5250 6000
+Wire Wire Line
+	6300 7250 5150 7250
+Wire Wire Line
+	5150 7250 5150 5850
+Connection ~ 5150 5850
+Wire Wire Line
+	6700 5250 7600 5250
+Wire Wire Line
+	7600 5250 7600 1700
+Wire Wire Line
+	7600 1700 6700 1700
+Connection ~ 6700 1700
+NoConn ~ 4700 4750
+Wire Bus Line
+	6200 3350 6200 3950
+Wire Bus Line
+	6200 5350 6200 6050
+Wire Bus Line
+	6200 6150 6200 6750
+Wire Bus Line
+	4800 3950 4800 6150
+Wire Bus Line
+	4800 1950 4800 2700
+Wire Bus Line
+	6200 1950 6200 3250
+Wire Bus Line
+	2550 1900 2550 2700
+Wire Bus Line
+	3350 1900 3350 2700
+Wire Bus Line
+	2550 3850 2550 4650
+Wire Bus Line
+	3600 3850 3600 7700
+Wire Bus Line
+	7250 5950 7250 7700
+Wire Bus Line
+	7250 1150 7250 3850
+$EndSCHEMATC

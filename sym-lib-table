@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name Memory_Flash)(type Legacy)(uri ${KIPRJMOD}/Memory_Flash.lib)(options "")(descr ""))
+  (lib (name 10bargraph)(type Legacy)(uri ${KIPRJMOD}/10bargraph.lib)(options "")(descr ""))
+  (lib (name AT28C16)(type Legacy)(uri ${KIPRJMOD}/AT28C16.lib)(options "")(descr ""))
+  (lib (name 2281AS_7SegmentChar)(type Legacy)(uri ${KIPRJMOD}/2281AS_7SegmentChar.lib)(options "")(descr ""))
+  (lib (name Memory_RAM_HM62256A)(type Legacy)(uri ${KIPRJMOD}/Memory_RAM_HM62256A.lib)(options "")(descr ""))
+  (lib (name Memory_NVRAM_FM1808)(type Legacy)(uri ${KIPRJMOD}/Memory_NVRAM_FM1808.lib)(options "")(descr ""))
+)

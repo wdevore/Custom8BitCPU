@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title "8Bit CPU"
 Date "2019-07-05"
 Rev "1.0"
@@ -52,5 +52,17 @@ S 1250 3950 1250 950
 U 5D302BBF
 F0 "Ram Rom Memory" 50
 F1 "Memory.sch" 50
+$EndSheet
+$Sheet
+S 3900 2900 1600 1200
+U 5DFEA1E6
+F0 "General Purpose Registers" 50
+F1 "GPRs.sch" 50
+$EndSheet
+$Sheet
+S 6750 2850 1450 1250
+U 5E0BCD1D
+F0 "Micro Code Control" 50
+F1 "MicroControl.sch" 50
 $EndSheet
 $EndSCHEMATC

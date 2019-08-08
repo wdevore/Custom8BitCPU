@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 6
+Sheet 3 7
 Title "ALU"
 Date "2019-07-16"
 Rev "1.0"
@@ -334,28 +334,6 @@ Wire Wire Line
 Wire Wire Line
 	9400 5650 9750 5650
 $Comp
-L 74xx:74LS08 U?
-U 3 1 5D9EE088
-P 4850 5250
-F 0 "U?" V 4850 5600 50  0000 R CNN
-F 1 "74LS08" V 5000 5650 50  0000 R CNN
-F 2 "" H 4850 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4850 5250 50  0001 C CNN
-	3    4850 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U?
-U 2 1 5D9ED215
-P 4750 3450
-F 0 "U?" V 4700 3100 50  0000 L CNN
-F 1 "74LS08" V 4800 3000 50  0000 L CNN
-F 2 "" H 4750 3450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4750 3450 50  0001 C CNN
-	2    4750 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS574 U?
 U 1 1 5DC526C5
 P 6350 3050
@@ -441,22 +419,6 @@ Wire Wire Line
 	7200 3250 7200 4250
 Wire Wire Line
 	7200 4250 8400 4250
-Text HLabel 4250 3350 0    50   Input ~ 0
-LD_ALU_Lo
-Text HLabel 4250 3550 0    50   Input ~ 0
-CLK
-Text HLabel 4400 5150 0    50   Input ~ 0
-LD_ALU_Hi
-Text HLabel 4400 5350 0    50   Input ~ 0
-CLK
-Wire Wire Line
-	4250 3550 4450 3550
-Wire Wire Line
-	4250 3350 4450 3350
-Wire Wire Line
-	4550 5150 4400 5150
-Wire Wire Line
-	4550 5350 4400 5350
 Wire Wire Line
 	6350 5750 6350 5650
 Wire Wire Line
@@ -531,10 +493,6 @@ Wire Bus Line
 	5750 750  9850 750 
 Connection ~ 5750 750 
 Wire Wire Line
-	5050 3450 5850 3450
-Wire Wire Line
-	5150 5250 5850 5250
-Wire Wire Line
 	5500 5750 6350 5750
 Wire Wire Line
 	5500 3550 5500 5350
@@ -550,10 +508,52 @@ Wire Wire Line
 	12200 4250 12200 3550
 Wire Wire Line
 	13000 4150 13000 4250
+Wire Wire Line
+	5150 5250 5850 5250
+Wire Wire Line
+	5050 3450 5850 3450
+Wire Wire Line
+	4550 5350 4400 5350
+Wire Wire Line
+	4550 5150 4400 5150
+Text HLabel 4400 5350 0    50   Input ~ 0
+CLK
+Text HLabel 4400 5150 0    50   Input ~ 0
+LD_ALU_Hi
+$Comp
+L 74xx:74LS08 U?
+U 3 1 5D9EE088
+P 4850 5250
+F 0 "U?" V 4850 5600 50  0000 R CNN
+F 1 "74LS08" V 5000 5650 50  0000 R CNN
+F 2 "" H 4850 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4850 5250 50  0001 C CNN
+	3    4850 5250
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
-	2250 750  2250 1550
+	5750 750  5750 4950
 Wire Bus Line
 	9850 750  9850 5750
 Wire Bus Line
-	5750 750  5750 4950
+	2250 750  2250 1550
+Wire Wire Line
+	4250 3350 4450 3350
+Wire Wire Line
+	4250 3550 4450 3550
+Text HLabel 4250 3550 0    50   Input ~ 0
+CLK
+Text HLabel 4250 3350 0    50   Input ~ 0
+LD_ALU_Lo
+$Comp
+L 74xx:74LS08 U?
+U 2 1 5D9ED215
+P 4750 3450
+F 0 "U?" V 4700 3100 50  0000 L CNN
+F 1 "74LS08" V 4800 3000 50  0000 L CNN
+F 2 "" H 4750 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4750 3450 50  0001 C CNN
+	2    4750 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
